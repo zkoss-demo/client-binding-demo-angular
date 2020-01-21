@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+hello.zul
+
+		Purpose:
+		
+		Description:
+		
+		History:
+				Tue Dec 24 10:20:45 CST 2019, Created by leon
+
+Copyright (C) 2019 Potix Corporation. All Rights Reserved.
+
+-->
+<zk xmlns:n="native">
+	<style src="styles.css" />
+	<script src="polyfills.js"/>
+	<script src="runtime.js"/>
+	<script src="scripts.js"/>
+	<script src="main.js"/>
+	<style src="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<div id="heroes"
+			 viewModel="@id('vm')@init('org.zkoss.zkangular8.hero.HeroVM')" vflex="1">
+			<n:app-root></n:app-root>
+	</div>
+</zk>
