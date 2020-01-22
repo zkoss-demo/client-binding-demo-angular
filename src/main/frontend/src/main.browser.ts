@@ -11,9 +11,5 @@ if (environment.production) {
 window['zk'].afterMount( () => {
   platformBrowserDynamic().bootstrapModule(AppBrowserModule, {
     missingTranslation: MissingTranslationStrategy.Error,
-  }).then(() => {
-    if ('serviceWorker' in navigator && environment.production) {
-      navigator.serviceWorker.register('./ngsw-worker.js');
-    }
   }).catch(err => console.log(err));
 });
