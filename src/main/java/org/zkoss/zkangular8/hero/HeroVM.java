@@ -35,15 +35,8 @@ public class HeroVM {
 		if (id == null) {
 			heroes = dao.queryAll();
 		} else {//query one
-			Hero selected = null;
-			for (Hero p : heroes) {
-				if (p.getId().equals(id)) {
-					selected = p;
-					break;
-				}
-			}
 			heroes.clear();
-			heroes.add(selected);
+			heroes.add(dao.queryById(id));
 		}
 	}
 

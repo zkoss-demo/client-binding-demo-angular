@@ -62,7 +62,7 @@ public class HeroDao {
 		return new LinkedList<Hero>(heroes);
 	}
 
-	public Hero getById(String id) {
+	public Hero queryById(String id) {
 		Hero result = null;
 		for (Hero h : heroes) {
 			if (h.getId().equals(id)) {
@@ -79,13 +79,13 @@ public class HeroDao {
 	}
 
 	public void update(String id, Integer likes) {
-		Hero hero = getById(id);
+		Hero hero = queryById(id);
 		if (hero != null)
 			hero.setLikes(likes);
 	}
 
 	public void remove(String id) {
-		Hero hero = getById(id);
+		Hero hero = queryById(id);
 		if (hero != null)
 			heroes.remove(hero);
 
